@@ -10,7 +10,7 @@ define([
 	'app/slides/tx/highlight',
 	'app/slides/tx/split',
 	'css!highlightjs/styles/ir_black.css',
-	'css!themes/black/theme.css',
+	'css!themes/gray/theme.css',
 	'css!themes/fade.css',
 	'domReady!'
 ],
