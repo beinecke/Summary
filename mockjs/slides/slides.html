@@ -27,62 +27,55 @@
 	<br />
 	<ul>
 		<li>基于数据模板生成模拟数据</li>
-		<li>基于html模板生成模拟数据</li>
 		<li>拦截并模拟ajax请求</li>
 	</ul>
+	<p>mock模拟的数据不只是随便的输出字符串，它包含了各种格式的模拟数据，例如:
+		<br />姓名，段落，时间，日期，图片地址，身份证号，电话，邮箱，ip等等</p>
 </div>
 <hr>
 <div>
 	<h2>How Mockjs works?</h2>
 	<br />
 	<p><a href="http://mockjs.com/" target="_blank">Mockjs官网</a></p>
+	<br />
+	<h3>Mock.js 的语法规范包括两部分：</h3>
+	<ul>
+		<li>数据模板定义规范（Data Template Definition，DTD）</li>
+		<ul>
+			<li>数据模板中的每个属性由 3 部分构成：属性名、生成规则、属性值：</li>
+			<li>"name|rule": value</li>
+		</ul>
+		<li>数据占位符定义规范（Data Placeholder Definition，DPD）</li>
+		<ul>
+			<li>占位符 只是在属性值字符串中占个位置，并不出现在最终的属性值中。</li>
+			<li>格式：@占位符(参数 [, 参数]) eg @cname()</li>
+		</ul>
+	</ul>
 </div>
 <hr>
 <div>
-	<h2>使用场景一：前后端未分离时部分接口Mock</h2>
+	<h2>使用场景二：前后端未分离时部分接口Mock</h2>
 	<br />
 	<p>线上：<a href="http://pre3.papayamobile.com:1234/shoptimize/signin" target="_blank">线上</a></p>
 	<p>需求：<a href="https://docs.google.com/document/d/1R9KCZFZMJ7f-Y5XpvjiYeoATKwRx6ZHfDo6O6DVqAnc/edit" target="_blank">需求文档</a></p>
 </div>
 <hr>
 <div>
-	<h1>Layouts</h1>
-	<h2>Just use CSS</h2>
+	<h2>使用场景三：Mock Server</h2>
+	<br />
+	<p>为前端开发者提供一个web容器，这个本地环境就是 mock server。</p>
+	<p>要完整运行前端代码，通常并不需要完整的后端环境，我们只要在mock server中实现以下几点就行了：</p>
+	<br />
 	<ul>
-		<li>Layouts are just CSS classes</li>
+		<li>能渲染模板----在mock server中集成模板引擎</li>
+		<li>实现请求路由映射----本地的mock server加入router</li>
+		<li>数据接口代理到生产或者测试环境</li>
 		<ul>
-			<li>e.g. <code>slide-layout-title</code></li>
+			<li>渲染页面的请求；----模版引擎</li>
+			<li>静态资源的请求；----本地静态资源或CDN资源</li>
+			<li>获取数据的请求。----Mock数据</li>
 		</ul>
-		<li>There are a few built-in, as you've seen</li>
-		<li>You can define your own</li>
 	</ul>
-</div>
-<hr>
-<div>
-	<h1>Themes</h1>
-	<h2>You guessed it, CSS</h2>
-	<ul>
-		<li>Themes are also CSS classes</li>
-		<li>You're looking at the 'gray' theme right now</li>
-		<li>You can, of course, define your own</li>
-	</ul>
-</div>
-<hr>
-<div>
-	<h1>Transitions</h1>
-	<h2>CSS again!</h2>
-	<ul>
-		<li>Slide transitions are defined using CSS3</li>
-		<li>This presentation uses the 'fade' transition</li>
-		<li>Can be integrated into a theme or mixed-and-matched</li>
-		<li>And yep, you can define your own</li>
-	</ul>
-</div>
-<hr>
-<div>
-	<h1>Mobile</h1>
-	<h2>Landscape, portrait, touch, swipe</h2>
-	<p>It has mobile viewport support in the builtin template and themes, plus touch and swipe event support for navigation.</p>
 </div>
 <hr>
 <div>
@@ -93,7 +86,4 @@
 	<p>【3】<a href="https://www.zhihu.com/question/35436669">你是如何构建 Web 前端 Mock Server 的？</a> </p>
 </div>
 <hr>
-<div class="slide-layout-title">
-	<h1>Get it</h1>
-	<h2>Now available on <a href="https://github.com/briancavalier/slides">github</a></h2>
-</div>
+
