@@ -8,7 +8,7 @@ function (require, Model, View, Controller, compose, fetch, markdown, highlight,
 
 		splitSlides = /\s*\<hr\s*\/?\>\s*/i;
 		source = compose(fetch(require), split(splitSlides));
-
+		// 此处更换新的slide文件即可
 		model = new Model(source('slides/{name}.html'));
 		view = new View(document.getElementById('slide-container'), model);
 		controller = new Controller(view);
@@ -17,4 +17,4 @@ function (require, Model, View, Controller, compose, fetch, markdown, highlight,
 			document.body.className = '';
 		});
 	}
-````
+```
