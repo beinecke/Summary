@@ -1,0 +1,128 @@
+<style>
+	.red{
+		color:red
+	}
+	body blockquote{
+		background-color: #f5f2f0;
+		padding: 10px;
+		/*margin: 2em 2em;*/
+		font-family: Consolas, Monaco, 'Andale Mono', monospace;
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		border-radius: 1em;
+		font-family: Consolas, Monaco, 'Andale Mono', monospace;
+		border-width: 0.3em;
+		border-color: #e0dfcc;
+		border-style: solid;
+		text-shadow: 0 1px white;
+		overflow: auto;
+	}
+</style>
+<div class="slide-layout-title">
+	<h2 class="center">接口风格: RESTful vs GraphQL</h2>
+	<br />
+	<br />
+	<br />
+	<br />
+	<h3 class="center">张海燕</h3>
+	<h3 class="center">10-13-2017</h3>
+</div>
+<hr>
+<div>
+	<h2>What is REST?</h2>
+	<br />
+	<p>在前后端分离的 Web 应用架构中,前端专注于页面,同时与后端进行数据交互；而后端则专注于提供 API 接口。</p>
+	<br />
+	<p>在这样的结构下,REST 是一个很流行的<strong class="red">前后端交互形式的约定。</strong></p>
+</div>
+<hr>
+<div>
+	<h2>REST</h2>
+	<br />
+	<p><strong class="red">RE</strong>presentational <strong class="red">S</strong>tate <strong class="red">T</strong>ransfer,表现层状态转化</p>
+	<br />
+	<p>在RESTful架构中,每个网址代表一种资源,所以网址中不能有动词,只能有名词,而且所用的名词往往与数据库的表格名对应。</p>
+	<br />
+	<p>URI,uniform resource identifier,统一资源标识符</p>
+	<p>URL,uniform resource locator,统一资源定位器</p>
+</div>
+<hr>
+<div>
+	<h2>HTTP动词</h2>
+	<br />
+	<ul>
+		<li>GET(SELECT):取出资源</li>
+		<li>POST(CREATE):新建一个资源</li>
+		<li>PUT(UPDATE):更新资源(提供改变后的完整资源)</li>
+		<li>PATCH(UPDATE):更新资源(提供改变的属性)</li>
+		<li>DELETE(DELETE):删除资源</li>
+	</ul>
+	<br />
+	<ul>
+		<li>HEAD:获取资源的元数据</li>
+		<li>OPTIONS:获取信息,关于资源的哪些属性是客户端可以改变的</li>
+	</ul>
+</div>
+<hr>
+<div>
+	<h2>Examples 1</h2>
+	<br />
+	<blockquote>
+		<pre>
+{
+'account': '/api/accounts',
+'publisher': '/api/publishers',
+'country': '/api/countries',
+'region': '/api/regions',
+'businessLead': '/api/business_leads',
+}
+		</pre>
+	</blockquote>
+</div>
+<hr>
+<div>
+	<h2>参数</h2>
+	<br />
+	<blockquote>
+		<pre>
+page:1
+limit:10
+show:all
+order:id,desc
+		</pre>
+	</blockquote>
+</div>
+<hr>
+<div>
+	<h2>CRM系统实例</h2>
+	<br />
+	<p><a href="http://localhost:8080/" target="_blank">CRM</a></p>
+</div>
+<hr>
+<div>
+	<h2>使用场景三:Mock Server</h2>
+	<br />
+	<p>为前端开发者提供一个web容器,这个本地环境就是 mock server。</p>
+	<p>要完整运行前端代码,通常并不需要完整的后端环境,我们只要在mock server中实现以下几点就行了:</p>
+	<br />
+	<ul>
+		<li>能渲染模板----在mock server中集成模板引擎</li>
+		<li>实现请求路由映射----本地的mock server加入router</li>
+		<li>数据接口代理到生产或者测试环境</li>
+		<ul>
+			<li>渲染页面的请求；----模版引擎</li>
+			<li>静态资源的请求；----本地静态资源或CDN资源</li>
+			<li>获取数据的请求。----Mock数据</li>
+		</ul>
+	</ul>
+</div>
+<hr>
+<div>
+	<h1>参考:</h1>
+	<br />
+	<p>【1】<a href="http://www.ruanyifeng.com/blog/2011/09/restful.html">理解RESTful架构</a> </p>
+	<p>【2】<a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南</a></p>
+	<p>【3】<a href="https://zhuanlan.zhihu.com/p/28674721">RESTful 接口实现简明指南</a> </p>
+</div>
+<hr>
+

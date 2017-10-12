@@ -20,7 +20,7 @@ define([
 		splitSlides = /\s*\<hr\s*\/?\>\s*/i;
 		source = compose(fetch(require), split(splitSlides));
 
-		model = new Model(source('slides/slides.html'));
+		model = new Model(source('slides/api.html'));
 		view = new View(document.getElementById('slide-container'), model);
 		controller = new Controller(view);
 
