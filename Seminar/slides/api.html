@@ -17,9 +17,16 @@
 		text-shadow: 0 1px white;
 		overflow: auto;
 	}
+	.half{
+		width:50%;
+		float:left;
+	}
+	.weak{
+		color:gray;
+	}
 </style>
 <div class="slide-layout-title">
-	<h2 class="center">接口风格: RESTful vs GraphQL</h2>
+	<h2 class="center">接口风格: REST vs GraphQL</h2>
 	<br />
 	<br />
 	<br />
@@ -42,9 +49,6 @@
 	<p><strong class="red">RE</strong>presentational <strong class="red">S</strong>tate <strong class="red">T</strong>ransfer,表现层状态转化</p>
 	<br />
 	<p>在RESTful架构中,每个网址代表一种资源,所以网址中不能有动词,只能有名词,而且所用的名词往往与数据库的表格名对应。</p>
-	<br />
-	<p>URI,uniform resource identifier,统一资源标识符</p>
-	<p>URL,uniform resource locator,统一资源定位器</p>
 	<br />
 </div>
 <hr>
@@ -84,26 +88,59 @@
 </div>
 <hr>
 <div>
-	<h2>参数</h2>
-	<br />
-	<blockquote>
-		<pre>
-page:1
-limit:10
-show:all
-order:id,desc
-		</pre>
-	</blockquote>
-</div>
-<hr>
-<div>
-	<h2>CRM系统实例</h2>
+	<h2>RESTful接口实例</h2>
 	<br />
 	<p><a href="http://localhost:8080/" target="_blank">CRM</a></p>
 </div>
 <hr>
 <div>
-
+	<h2>What is GraphQL?</h2>
+	<br/>
+	<p>GraphQL是一种<strong class="red">API查询语言</strong>，是由Facebook创建并最终开源的</p>
+</div>
+<hr>
+<div>
+	<h2>GraphQL接口参数</h2>
+	<blockquote>
+	<pre>
+{
+user(id: 42) {
+	firstName
+	lastName
+	email
+}
+}
+	</pre>
+	</blockquote>
+</div>
+<hr>
+<div>
+	<div class="half">
+		<h2 style="margin-bottom:20px;text-align:center;">REST</h2>
+		<ul>
+			<li>充分利用HTTP缓存</li>
+			<br>
+			<li class="weak">不能精准的获取数据</li>
+		</ul>
+	</div>
+	<div class="half">
+		<h2 style="margin-bottom:20px;text-align: center">GraphQL</h2>
+		<ul>
+			<li>所见即所得(schema)</li>
+			<li>精准的获取数据</li>
+			<br>
+			<li class="weak">不能充分利用HTTP动词</li>
+			<li class="weak">需要服务器端实现缓存机制</li>
+		</ul>
+	</div>
+</div>
+<hr>
+<div>
+	<img src="https://sfault-image.b0.upaiyun.com/343/444/3434449435-596f483fecac2_articlex">
+</div>
+<hr>
+<div>
+	<img src="https://sfault-image.b0.upaiyun.com/242/634/2426349484-596f4a1fa1ce6_articlex">
 </div>
 <hr>
 <div>
