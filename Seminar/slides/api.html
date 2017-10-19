@@ -97,6 +97,8 @@
 	<h2>What is GraphQL?</h2>
 	<br/>
 	<p>GraphQL是一种<strong class="red">API查询语言</strong>，是由Facebook创建并最终开源的</p>
+	<br>
+	<p>GraphQL是一个runtime，可以认为它是一个运行在服务器上的可以理解和响应使用GraphQL语言的请求应用程序，类似一个服务端的GraphQL翻译</p>
 </div>
 <hr>
 <div>
@@ -104,7 +106,7 @@
 	<blockquote>
 	<pre>
 {
-user(id: 42) {
+user(id: 2) {
 	firstName
 	lastName
 	email
@@ -112,6 +114,33 @@ user(id: 42) {
 }
 	</pre>
 	</blockquote>
+	<br>
+	<h2>返回结果</h2>
+	<blockquote>
+	<pre>
+"data": {
+	"user": {
+		"firstName": "John",
+		"lastName": "Doe",
+		"email": "john@example.com"
+	}
+}
+
+	</pre>
+	</blockquote>
+	<a href="http://localhost:3000/graphql?query={user(id:%222%22){name,email}}" target="_blank">GranpQL请求</a>
+	<br>
+	<br>
+</div>
+<hr>
+<div>
+	<h2>REST</h2>
+	<img src="https://sfault-image.b0.upaiyun.com/343/444/3434449435-596f483fecac2_articlex" style="width: 100%;">
+</div>
+<hr>
+<div>
+	<h2>GraphQL</h2>
+	<img src="https://sfault-image.b0.upaiyun.com/242/634/2426349484-596f4a1fa1ce6_articlex" style="width: 100%">
 </div>
 <hr>
 <div>
@@ -121,12 +150,13 @@ user(id: 42) {
 			<li>充分利用HTTP缓存</li>
 			<br>
 			<li class="weak">不能精准的获取数据</li>
+
 		</ul>
 	</div>
 	<div class="half">
 		<h2 style="margin-bottom:20px;text-align: center">GraphQL</h2>
 		<ul>
-			<li>所见即所得(schema)</li>
+			<li>所见即所得(Schema)</li>
 			<li>精准的获取数据</li>
 			<br>
 			<li class="weak">不能充分利用HTTP动词</li>
@@ -135,15 +165,7 @@ user(id: 42) {
 	</div>
 </div>
 <hr>
-<div>
-	<img src="https://sfault-image.b0.upaiyun.com/343/444/3434449435-596f483fecac2_articlex">
-</div>
-<hr>
-<div>
-	<img src="https://sfault-image.b0.upaiyun.com/242/634/2426349484-596f4a1fa1ce6_articlex">
-</div>
-<hr>
-<div>
+<div style="font-size:24px">
 	<h2>参考:</h2>
 	<br />
 	<p>【1】<a href="http://www.ruanyifeng.com/blog/2011/09/restful.html" target="_blank">理解RESTful架构</a> </p>
@@ -154,6 +176,8 @@ user(id: 42) {
 	<p>【6】<a href="https://zhuanlan.zhihu.com/p/28674721" target="_blank">RESTful 接口实现简明指南</a> </p>
 	<p>【7】<a href="https://segmentfault.com/a/1190000005766732" target="_blank">GraphQL初探:从REST到GraphQL，更完善的数据查询定义</a> </p>
 	<p>【8】<a href="http://www.cnblogs.com/qiangxia/p/5348257.html" target="_blank">Node.js 服务端实践之 GraphQL 初探</a></p>
+	<p>【9】<a href="https://segmentfault.com/a/1190000010261889" target="_blank"> 怎样使用GraphQL - 2.GraphQL是更好的REST</a></p>
+	<br>
 </div>
 <hr>
 
