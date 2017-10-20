@@ -90,7 +90,7 @@
 <div>
 	<h2>RESTful接口实例</h2>
 	<br />
-	<p><a href="http://localhost:8080/" target="_blank">CRM</a></p>
+	<p><a href="http://192.168.2.71:1990/ticket.html#/ticket" target="_blank">CRM</a></p>
 </div>
 <hr>
 <div>
@@ -107,10 +107,10 @@
 	<pre>
 {
 user(id: 2) {
-	firstName
-	lastName
-	email
-}
+  firstName
+  lastName
+  email
+  }
 }
 	</pre>
 	</blockquote>
@@ -119,15 +119,16 @@ user(id: 2) {
 	<blockquote>
 	<pre>
 "data": {
-	"user": {
-		"firstName": "John",
-		"lastName": "Doe",
-		"email": "john@example.com"
-	}
+  "user": {
+     "firstName": "John",
+     "lastName": "Doe",
+     "email": "john@example.com"
+  }
 }
 
 	</pre>
 	</blockquote>
+	<br>
 	<a href="http://localhost:3000/graphql?query={user(id:%222%22){name,email}}" target="_blank">GranpQL请求</a>
 	<br>
 	<br>
